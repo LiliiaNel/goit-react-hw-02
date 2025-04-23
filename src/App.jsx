@@ -4,7 +4,7 @@ import './App.css'
 import Description from './components/description/Description';
 import Options from './components/options/Options';
 import Feedback from './components/feedback/Feedback';
-import Notification from './components/Notification/Notification';
+import Notification from './components/notification/Notification';
 
 function App() {
   const [vote, setVote] = useState ({
