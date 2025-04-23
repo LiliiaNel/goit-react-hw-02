@@ -7,27 +7,34 @@ import Feedback from './components/feedback/Feedback';
 import Notification from './components/notification/Notification';
 
 function App() {
-  const [vote, setVote] = useState ({
-	good: 0,
-	neutral: 0,
-	bad: 0,
+  const [vote, setVote] = useState({
+    good: 0,
+    neutral: 0,
+    bad: 0,
   });
 
-  const updateVote = (voteType) => {
+  const updateFeedback = (voteType) => {
     setVote({ ...vote, [voteType]: vote[voteType] + 1 });
   };
   
   const totalFeedback = vote.good + vote.neutral + vote.bad;
 
+  const positiveFeedback = Math.round((vote.good / totalFeedback) * 100);
+
+  const onReset = () => {
+    setVote({good: 0, neutral: 0, bad: 0 });
+  };
+
+
   return (
     <>
       <Description />
-      <Options onClickVote={updateVote} />
+      <Options onClickVote={updateFeedback} onResetBtn = {onReset} />
       {totalFeedback > 0 ? <Feedback
         valueGood={vote.good}
         valueNeutral={vote.neutral}
         valueBad={vote.bad}
-        totalValue={totalFeedback} /> : <Notification />}
+        totalValue={totalFeedback} positiveCount = {positiveFeedback} /> : <Notification />}
     </>
   )
 }
