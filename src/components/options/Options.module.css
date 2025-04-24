@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+button {
+  width: 100px;
+  height: 45px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d6c7c7;
+  color: azure;
+  font-weight: 600;
+}
+
+button.good {
+  background-color: #28a746cd;
+}
+button.neutral {
+  background-color: #ffc107cb;
+}
+
+button.bad {
+  background-color: #dc3546ca;
+}
+
+button.reset {
+  background-color: #858485cb;
+}

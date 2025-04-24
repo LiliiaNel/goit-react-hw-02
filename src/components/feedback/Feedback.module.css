@@ -1,0 +1,22 @@
+.feedbackBox p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+.feedbackBox .total {
+  font-weight: bold;
+}
+
+.feedbackBox {
+  display: inline-block;
+  width: 424px;
+  text-align: left;
+  padding: 10px 20px;
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.feedbackBox:hover {
+  border-color: #646cff;
+}
