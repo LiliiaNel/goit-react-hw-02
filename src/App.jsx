@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <Description />
-      <Options onClickVote={updateFeedback} onResetBtn = {onReset} />
+      <Options onClickVote={updateFeedback} onResetBtn={onReset} hasFeedback={totalFeedback>0} />
       {totalFeedback > 0 ? <Feedback
         valueGood={vote.good}
         valueNeutral={vote.neutral}
